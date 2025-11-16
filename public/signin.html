@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Coupling</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button class="theme-toggle-btn" id="themeToggle">
+      <span id="themeText">☀️ Light Mode</span>
+    </button>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1>Coupling</h1>
+      <p>Welcome back</p>
+
+      <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+      <form id="signinForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Sign In
+        </button>
+      </form>
+
+      <div class="auth-link">
+        Don't have an account? <a href="/signup">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/signin.js"></script>
+</body>
+</html>

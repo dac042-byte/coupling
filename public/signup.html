@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Coupling</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="theme-toggle">
+    <button class="theme-toggle-btn" id="themeToggle">
+      <span id="themeText">☀️ Light Mode</span>
+    </button>
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1>Coupling</h1>
+      <p>Join the community</p>
+
+      <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required minlength="6">
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="United States">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Australia">Australia</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Spain">Spain</option>
+            <option value="Italy">Italy</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Norway">Norway</option>
+            <option value="Denmark">Denmark</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="South Korea">South Korea</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="university">University</label>
+          <input type="text" id="university" name="university" placeholder="e.g., MIT, Stanford, Harvard" required>
+        </div>
+
+        <div class="form-group">
+          <label>I am a...</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="technical" name="userType" value="technical" required>
+              <label for="technical">
+                <div>💻 Technical</div>
+                <small style="color: var(--text-muted); font-size: 12px;">Engineer/Developer</small>
+              </label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="nonTechnical" name="userType" value="non-technical" required>
+              <label for="nonTechnical">
+                <div>💡 Non-Technical</div>
+                <small style="color: var(--text-muted); font-size: 12px;">Idea Maker/Founder</small>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="3"></textarea>
+        </div>
+
+        <div id="technicalFields" style="display: none;">
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" name="skills" placeholder="e.g., React, Python, Node.js, ML">
+          </div>
+        </div>
+
+        <div id="nonTechnicalFields" style="display: none;">
+          <div class="form-group">
+            <label for="projectIdea">Project Idea</label>
+            <textarea id="projectIdea" name="projectIdea" placeholder="Describe your project idea..." rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="equityOffered">Equity/Compensation Offered</label>
+            <input type="text" id="equityOffered" name="equityOffered" placeholder="e.g., 20% equity, $500, Free project">
+          </div>
+
+          <div class="form-group">
+            <label for="timeline">Project Timeline</label>
+            <input type="text" id="timeline" name="timeline" placeholder="e.g., 3 months, 6 weeks">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Create Account
+        </button>
+      </form>
+
+      <div class="auth-link">
+        Already have an account? <a href="/signin">Sign in</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/signup.js"></script>
+</body>
+</html>
