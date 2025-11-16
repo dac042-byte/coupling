@@ -4,6 +4,8 @@ node_modules/
 # Database
 *.db
 *.db-journal
+# But include the main database with placeholder users
+!coupling.db
 
 # Logs
 logs
